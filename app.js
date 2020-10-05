@@ -10,6 +10,9 @@ const server = http.createServer((req, res) => {
 	// process.exit() it exit the process delibrately
 
 	const url = req.url;
+	const method = req.method;
+	const fs = require("fs");
+
 	if (url === "/") {
 		res.write("<html>");
 		res.write("<head>Enter Message</head>");
@@ -17,7 +20,13 @@ const server = http.createServer((req, res) => {
 			"<body> <form action='/message' method='POST'> <input type='text' name='message'/> <button type=''submit>Send</button> </form> </body>"
 		);
 		res.write("</html>");
-	  return res.end();
+		return res.end();
+	}
+	if (url === "/message" && method === "POST") {
+		fs.writeFileSync("message.txt", "Dummy Text");
+		res.statusCode = 302;
+		res.setHeader("Location", "/");
+		return res.end();
 	}
 	res.setHeader("Content-Type", "text/html");
 	res.write("<html>");
@@ -26,4 +35,4 @@ const server = http.createServer((req, res) => {
 	res.end();
 });
 
-server.listen(3000);
+server.listen(1718);
