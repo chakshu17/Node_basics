@@ -1,5 +1,3 @@
-const http = require("http");
-
 const express = require("express");
 
 const app = express();
@@ -13,6 +11,5 @@ app.use((req, res, next) => {
   console.log("In middleware 2");
   res.send('<h1>Hello From Express</h1>');
 });
-const server = http.createServer(app);
+app.listen(1718)  // create server with provided port no.
 
-server.listen(1718);
