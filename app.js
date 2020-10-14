@@ -2,7 +2,7 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const path = require("path");
 
-const rootDir = require('../util/path');
+const rootDir = require('./util/path');
 const app = express();
 
 const adminRoutes = require("./routes/admin");

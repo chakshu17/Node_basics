@@ -4,21 +4,100 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Add Product</title>
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				font-family: sans-serif;
+			}
+			main {
+				padding: 1rem;
+			}
+			.main-header {
+				width: 100%;
+				height: 3.5rem;
+				background-color: #dbc441;
+				padding: 0 1.5rem;
+			}
+			.main-header__nav {
+				height: 100%;
+				display: flex;
+				align-items: center;
+			}
+			.main-header__item-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+			}
+			.main-header__item {
+				padding: 0;
+				margin: 0 1rem;
+			}
+			.main-header__item a {
+				text-decoration: none;
+				color: white;
+			}
+
+			.main-header__item a:hover,
+			.main-header__item a:active {
+				color: black;
+			}
+
+			.product-form{
+				width: 20rem;
+				max-width: 90% ;
+				margin: auto;
+			}
+
+			.form-control{
+				margin: 1rem 0;
+			}
+			.form-control label,
+			.form-control input{
+				display: block;
+				width: 100%;
+			}
+			.form-control input{
+				border: 1px solid black;
+				font: inherit;
+				border-radius: 2px;
+			}
+			button{
+				font: inherit;
+				border: 1px solid black;
+				background: white;
+				color: black;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+
+			button:hover,
+			button:active{
+				background-color: black;
+				color: whitesmoke;
+			}
+		</style>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<ul>
-					<li><a href="/">Shop</a></li>
-					<li><a href="/add-products">Add Products</a></li>
+		<header class="main-header">
+			<nav class="main-header__nav">
+				<ul class="main-header__item-list">
+					<li class="main-header__item"><a href="/">Shop</a></li>
+					<li class="main-header__item">
+						<a href="/admin/add-products">Add Products</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<main>
-			<form method="POST" action="/add-products">
-				<input type="text" name="title" />
-				<button type="button">Add Product</button>
+			<form class="product-form" method="POST" action="/admin/add-products">
+				<div class="form-control">
+					<label for="title" >Title</label>
+					<input type="text" name="title" />
+				</div>
+				<button type="submit">Add Product</button>
 			</form>
 		</main>
 	</body>
