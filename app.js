@@ -9,6 +9,7 @@ const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname,'public'))) // for styling , we give path to file for html
 
 app.use("/admin", adminRoutes);
 app.use(shopRoutes);
