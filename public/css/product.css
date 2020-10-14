@@ -28,6 +28,6 @@ button{
 
 button:hover,
 button:active{
-    background-color: black;
-    color: whitesmoke;
+    background-color: rgba(58, 207, 221, 0.979);
+    color: rgb(8, 8, 8);
 }
