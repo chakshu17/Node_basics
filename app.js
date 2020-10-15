@@ -9,7 +9,6 @@ app.set("view engine", "pug");
 app.set("views", "views");// for telling that we have files in views folder.
 						//If name of views folder is different than views
 
-
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
