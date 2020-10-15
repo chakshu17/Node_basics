@@ -8,7 +8,7 @@ const products = [];
 
 // /admin/add-products =>GET req
 router.get("/add-products", (req, res, next) => {
-	res.render('add-product',{pageTitle:'Add Product'});
+	res.render('add-product',{pageTitle:'Add Product',path:'/admin/add-products'});
 });
 
 // /admin/add-products =>POST req
