@@ -4,8 +4,11 @@ const path = require("path");
 
 const rootDir = require("./util/path");
 const app = express();
+const expressHbs = require('express-handlebars')
 
-app.set("view engine", "pug");
+app.engine('hbs', expressHbs())
+app.set("view engine", "hbs");
+
 app.set("views", "views");// for telling that we have files in views folder.
 						//If name of views folder is different than views
 
