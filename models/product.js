@@ -1,7 +1,9 @@
 const products = [];
-const { json } = require("body-parser");
+
 const fs = require("fs");
 const path = require("path");
+
+
 
 module.exports = class Products {
 	constructor(t) {
@@ -26,7 +28,7 @@ module.exports = class Products {
 		});
 	}
 
-	static fetchAll() {
+	static fetchAll(cb) {
 		const p = path.join(
 			path.dirname(process.mainModule.filename),
 			"data",
@@ -34,9 +36,9 @@ module.exports = class Products {
 		);
 		fs.readFile(p, (err, fileContent) => {
 			if (err) {
-				return [];
+				cb([])
 			}
-			return JSON.parse(fileContent);
+			cb(JSON.parse(fileContent));
 		});
 	}
 };
