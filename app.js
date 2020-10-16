@@ -10,13 +10,13 @@ app.set("view engine", "ejs");
 app.set("views", "views");// for telling that we have files in views folder.
 						//If name of views folder is different than views
 
-const adminData = require("./routes/admin");
+const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public"))); // for styling , we give path to file for html
 
-app.use("/admin", adminData.routes);
+app.use("/admin",adminRoutes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
