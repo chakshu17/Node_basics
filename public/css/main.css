@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -5,6 +11,7 @@ body {
 }
 main {
 	padding: 1rem;
+	margin: auto;
 }
 .main-header {
 	width: 100%;
@@ -33,8 +40,9 @@ main {
 }
 
 .main-header__item a:hover,
-.main-header__item a:active {
-	color: black;
+.main-header__item a:active,
+.main-header__item a.active {
+  color: black;
 }
 
 .grid {
