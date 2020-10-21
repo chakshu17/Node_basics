@@ -175,7 +175,8 @@ main {
 	color: #00695c;
 	background: white;
 	border-radius: 3px;
-	cursor: pointer;
+  cursor: pointer;
+
 }
 
 .btn:hover,
