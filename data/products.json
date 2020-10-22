@@ -1,16 +1,1 @@
-[
-	{
-		"title": "book 1",
-		"imageUrl": "https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg",
-		"description": "Book 1 in the house",
-		"price": "999",
-		"id": "12346"
-	},
-	{
-		"title": "Book 1789",
-		"imageUrl": "https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg",
-		"description": "Book is not for Sale",
-		"price": "199",
-		"id": "12345"
-	}
-]
+[{"id":"12346","title":"Book 1","imageUrl":"https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg","description":"Book 1 in the house","price":"9999"},{"id":"12345","title":"Book 1789","imageUrl":"https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg","description":"Book is not for Sale!!!!","price":"599"}]
