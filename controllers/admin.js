@@ -25,7 +25,7 @@ exports.getEditProduct = (req, res, next) => {
 		return res.redirect("/");
 	}
 	const prodId = req.params.productId;
-	Product.findById(prodId, (product) => {
+	Product.findByid(prodId, (product) => {
 		if (!product) {
 			return res.redirect("/");
 		}
