@@ -1,9 +1,1 @@
-[
-	{
-		"id": "0.8014011707061865",
-		"title": "Book",
-		"imageUrl": "https://www.google.co.in/search?hl=en&authuser=0&tbm=isch&sxsrf=ALeKk00i73lu0FzC9iRfhxWjkkpJnxR6Uw%3A1602910073377&source=hp&biw=958&bih=927&ei=eXeKX5HzFKiW4-EP_bSdqAk&q=Books&oq=Books&gs_lcp=CgNpbWcQAzIFCAAQsQMyBQgAELEDMgUIABCxAzIFCAAQsQMyAggAMgUIABCxAzIFCAAQsQMyBQgAELEDMgIIADIFCAAQsQM6BwgjEOoCECc6BAgjECc6CAgAELEDEIMBULsEWLQNYMsOaAFwAHgAgAGNAogBgweSAQUwLjEuM5gBAKABAaoBC2d3cy13aXotaW1nsAEK&sclient=img&ved=0ahUKEwjRk52s6brsAhUoyzgGHX1aB5UQ4dUDCAc&uact=5#imgrc=PdNyEfnUXZbqgM",
-		"description": "Books For Sale",
-		"price": "90"
-	}
-]
+[{"id":"0.8014011707061865","title":"Book","imageUrl":"https://www.google.co.in/search?hl=en&authuser=0&tbm=isch&sxsrf=ALeKk00i73lu0FzC9iRfhxWjkkpJnxR6Uw%3A1602910073377&source=hp&biw=958&bih=927&ei=eXeKX5HzFKiW4-EP_bSdqAk&q=Books&oq=Books&gs_lcp=CgNpbWcQAzIFCAAQsQMyBQgAELEDMgUIABCxAzIFCAAQsQMyAggAMgUIABCxAzIFCAAQsQMyBQgAELEDMgIIADIFCAAQsQM6BwgjEOoCECc6BAgjECc6CAgAELEDEIMBULsEWLQNYMsOaAFwAHgAgAGNAogBgweSAQUwLjEuM5gBAKABAaoBC2d3cy13aXotaW1nsAEK&sclient=img&ved=0ahUKEwjRk52s6brsAhUoyzgGHX1aB5UQ4dUDCAc&uact=5#imgrc=PdNyEfnUXZbqgM","description":"Books For Sale","price":"90"},{"id":"0.9030640872650835","title":"Book 1","imageUrl":"https://img.jakpost.net/c/2019/03/02/2019_03_02_66706_1551461528._large.jpg","description":"sadfghjk","price":"20"}]
