@@ -10,7 +10,6 @@ exports.getProducts = (req, res, next) => {
 				path: "/products",
 			});
 		})
-
 		.catch((err) => console.log(err));
 };
 

@@ -1,4 +1,4 @@
-const Product = require("../models/product_with_file_op");
+const Product = require("../models/product");
 
 exports.getAddProduct = (req, res, next) => {
 	res.render("admin/edit-product", {
@@ -15,8 +15,12 @@ exports.postAddProducts = (req, res, next) => {
 	const description = req.body.description;
 
 	const product = new Product(null, title, imageUrl, description, price);
-	product.save();
-	res.redirect("/");
+	product
+		.save()
+		.then(() => {
+			res.redirect("/");
+		})
+		.catch((err) => console.log(err));
 };
 
 exports.postEditProduct = (req, res, next) => {
