@@ -1,6 +1,6 @@
 const Product = require("../models/product");
 const Cart = require("../models/cart");
-
+// to get all products
 exports.getProducts = (req, res, next) => {
 	Product.fetchAll()
 		.then(([rows, fieldData]) => {
@@ -12,16 +12,18 @@ exports.getProducts = (req, res, next) => {
 		})
 		.catch((err) => console.log(err));
 };
-
+// to get single product
 exports.getProduct = (req, res, next) => {
 	const prodId = req.params.productId;
-	Product.findByid(prodId, (product) => {
-		res.render("shop/product-details", {
-			product: product,
-			pageTitle: product.title,
-			path: "/products",
-		});
-	});
+	Product.findByid(prodId)
+		.then(([product]) => {
+			res.render("shop/product-details", {
+				product: product[0],
+				pageTitle: product.title,
+				path: "/products",
+			});
+		})
+		.catch((err) => console.log(err));
 };
 
 exports.getIndex = (req, res, next) => {
