@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 
 const errorController = require('./controllers/error')
+const db = require('./util/database')
 
 const rootDir = require("./util/path");
 const app = express();
@@ -13,6 +14,8 @@ app.set("views", "views");
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
+
+db.execute('SELECT * ')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public"))); // for styling , we give path to file for html
