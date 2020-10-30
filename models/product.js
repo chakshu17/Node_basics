@@ -24,7 +24,7 @@ const Product = sequelize.define('product',{
 	}
 })
 
-module.exports = Product
+module.exports = Product	
 
 // const db = require("../util/database");
 
