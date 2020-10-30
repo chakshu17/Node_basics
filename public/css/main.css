@@ -17,6 +17,13 @@ main {
 .centered{
   text-align: center;
 }
+.image{
+  height: 20rem;
+}
+
+.image img{
+  height: 100%;
+}
 .main-header {
 	width: 100%;
 	height: 3.5rem;
