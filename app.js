@@ -7,7 +7,7 @@ const sequelize = require("./util/database");
 const Product = require("./models/product");
 const User = require("./models/user");
 
-const rootDir = require("./util/path");
+// const rootDir = require("./util/path");
 const app = express();
 
 app.set("view engine", "ejs");
@@ -19,9 +19,9 @@ const shopRoutes = require("./routes/shop");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public"))); // for styling , we give path to file for html
 
-app.use((res, req, next) => {
-	User.findByPk([1])
-		.then(user=>{
+app.use((req, res, next) => {
+	User.findByPk(1)
+		.then((user) => {
 			req.user = user;
 			next();
 		})
@@ -35,7 +35,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-Product.belongsTo(User, { constraints: true, onDelete: "CASCADE" });
+Product.belongsTo(User, { constraints: true, onDelete: 'CASCADE' });
 User.hasMany(Product);
 
 sequelize
@@ -45,7 +45,7 @@ sequelize
 	})
 	.then((user) => {
 		if (!user) {
-			User.create({
+			return User.create({
 				name: "Chakshu",
 				email: "chakshu@gmail.com",
 			});
