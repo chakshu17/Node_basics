@@ -155,16 +155,22 @@ exports.postOrder = (req, res, next) => {
 };
 
 exports.getOrders = (req, res, next) => {
-	res.render("shop/orders", {
-		pageTitle: "Your Orders",
-		path: "/orders",
-	});
+	req.user
+		.getOrders({ include: ["products"] })
+		.then((orders) => {
+			res.render("shop/orders", {
+				pageTitle: "Your Orders",
+				path: "/orders",
+				orders: orders,
+			});
+		})
+		.catch((err) => console.log(err));
 };
 
-// exports.getCheckout = (req, res, next) => {
-// 	res.render("shop/checkout", {
-// 		prods: products,
-// 		pageTitle: "Your CheckOut",
-// 		path: "/checkout",
-// 	});
-// };
+exports.getCheckout = (req, res, next) => {
+	res.render("shop/checkout", {
+		prods: products,
+		pageTitle: "Your CheckOut",
+		path: "/checkout",
+	});
+};
